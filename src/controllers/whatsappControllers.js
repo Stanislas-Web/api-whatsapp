@@ -11,21 +11,22 @@ const Hello = (req, res) => {
 
 
 const VerifyToken = (req, res) => {
-    
-    try{
-        var accessToken = "RTQWWTVHBDEJHJKIKIKNDS9090DS";
-        var token = req.query["hub.verify_token"];
-        var challenge = req.query["hub.challenge"];
 
-        if(challenge != null && token != null && token == accessToken){
-            res.send(challenge);
-        }else{
-            res.status(400).send();
-        }
+    res.status(200).send({test:"ok"});
+    // try{
+    //     var accessToken = "RTQWWTVHBDEJHJKIKIKNDS9090DS";
+    //     var token = req.query["hub.verify_token"];
+    //     var challenge = req.query["hub.challenge"];
 
-    }catch(e){
-        res.status(400).send();
-    }
+    //     if(challenge != null && token != null && token == accessToken){
+    //         res.send(challenge);
+    //     }else{
+    //         res.status(400).send();
+    //     }
+
+    // }catch(e){
+    //     res.status(400).send();
+    // }
 }
 
 const ReceivedMessage = (req, res) => {
