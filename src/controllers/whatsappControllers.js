@@ -1,6 +1,15 @@
 const fs = require("fs");
 const myConsole = new console.Console(fs.createWriteStream("./logs.txt"));
 const processMessage = require("../shared/processMessage");
+
+const hello = (req, res) => {
+    
+    res.status(400).send({
+            "hello":"hello world"
+    });
+}
+
+
 const VerifyToken = (req, res) => {
     
     try{
