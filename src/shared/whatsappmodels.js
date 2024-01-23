@@ -11,10 +11,10 @@ function MessageText(textResponse, number){
     return data;
 }
 
-function MessageList(numero) {
-    const données = JSON.stringify({
+function MessageList(number) {
+    const data = JSON.stringify({
         "messaging_product": "whatsapp",
-        "to": numero,
+        "to": number,
         "type": "interactive",
         "interactive": {
             "type": "list",
@@ -61,8 +61,9 @@ function MessageList(numero) {
             }
         }
     });
-    return données;
+    return data;
 }
+
 
 function MessageComprar(number){
     const data = JSON.stringify({
@@ -72,7 +73,7 @@ function MessageComprar(number){
         "interactive": {
             "type": "button",
             "body": {
-                "text": "Selecciona uno de los productos"
+                "text": "Sélectionnez l'un des produits"
             },
             "action": {
                 "buttons": [
@@ -80,14 +81,14 @@ function MessageComprar(number){
                         "type": "reply",
                         "reply": {
                             "id": "option-laptop",
-                            "title": "Laptop"
+                            "title": "Ordinateur portable"
                         }
                     },
                     {
                         "type": "reply",
                         "reply": {
                             "id": "option-computadora",
-                            "title": "Computadora"
+                            "title": "Ordinateur"
                         }
                     }
                 ]
@@ -96,6 +97,7 @@ function MessageComprar(number){
     });
     return data;
 }
+
 
 function MessageLocation(number){
     const data = JSON.stringify({
@@ -119,3 +121,9 @@ MessageList,
 MessageComprar,
 MessageLocation
 };
+
+
+
+
+
+
