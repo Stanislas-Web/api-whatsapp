@@ -72,7 +72,7 @@ function MessageList(number){
         "interactive": {
             "type": "list",
             "body": {
-                "text": "✅ Tengo estas opciones"
+                "text": "✅ J'ai ces options"
             },
             "footer": {
                 "text": "Selecciona una de las opciones para poder atenderte"
