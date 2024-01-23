@@ -22,7 +22,7 @@ function MessageListFrench(number){
                 "text": "✅ J'ai ces options"
             },
             "footer": {
-                "text": "Choisissez votre abonnement."
+                "text": "Sélectionnez l'une des options pour que nous puissions vous aider"
             },
             "action": {
                 "button": "Voir les options",
@@ -36,7 +36,7 @@ function MessageListFrench(number){
                                 "description": "Achetez les meilleurs produits pour votre maison"
                             },
                             {
-                                "id": "main-vender",
+                                "id": "main-vender5",
                                 "title": "Vendre",
                                 "description": "Vendez vos produits"
                             }
@@ -51,7 +51,7 @@ function MessageListFrench(number){
                                 "description": "Vous pouvez visiter notre agence.."
                             },
                             {
-                                "id": "main-contacto",
+                                "id": "main-contacto5",
                                 "title": "Centre de contact",
                                 "description": "L'un de nos agents vous assistera.."
                             }
@@ -72,25 +72,25 @@ function MessageList(number){
         "interactive": {
             "type": "list",
             "body": {
-                "text": "✅ Abonnement"
+                "text": "✅ Tengo estas opciones"
             },
             "footer": {
-                "text": "Choisissez votre abonnement."
+                "text": "Selecciona una de las opciones para poder atenderte"
             },
             "action": {
-                "button": "Voir les options",
+                "button": "Ver opciones",
                 "sections": [
                     {
-                        "title": "26 Jours | 7800 fc | 31.2 $",
+                        "title": "Compra y vende productos",
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "7800 fc",
+                                "title": "Comprar",
                                 "description": "Compra los mejores productos para tu hogar"
                             },
                             {
                                 "id": "main-vender",
-                                "title": "31.2 $",
+                                "title": "Vender",
                                 "description": "Vende tus productos"
                             }
                         ]
