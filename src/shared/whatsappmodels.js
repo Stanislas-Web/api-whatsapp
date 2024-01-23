@@ -11,49 +11,49 @@ function MessageText(textResponse, number){
     return data;
 }
 
-function MessageList(number){
-    const data = JSON.stringify({
+function MessageList(numero) {
+    const données = JSON.stringify({
         "messaging_product": "whatsapp",
-        "to": number,
+        "to": numero,
         "type": "interactive",
         "interactive": {
             "type": "list",
             "body": {
-                "text": "✅ Tengo estas opciones"
+                "text": "✅ J'ai ces options"
             },
             "footer": {
-                "text": "Selecciona una de las opciones para poder atenderte"
+                "text": "Sélectionnez l'une des options pour que nous puissions vous aider"
             },
             "action": {
-                "button": "Ver opciones",
+                "button": "Voir les options",
                 "sections": [
                     {
-                        "title": "Compra y vende productos",
+                        "title": "Acheter et vendre des produits",
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "Comprar",
-                                "description": "Compra los mejores productos para tu hogar"
+                                "title": "Acheter",
+                                "description": "Achetez les meilleurs produits pour votre maison"
                             },
                             {
                                 "id": "main-vender",
-                                "title": "Vender",
-                                "description": "Vende tus productos"
+                                "title": "Vendre",
+                                "description": "Vendez vos produits"
                             }
                         ]
                     },
                     {
-                        "title": "📍Centro de atención",
+                        "title": "📍Centre d'attention",
                         "rows": [
                             {
                                 "id": "main-agencia",
-                                "title": "Agencia",
-                                "description": "Puedes visitar nuestra agencia."
+                                "title": "Agence",
+                                "description": "Vous pouvez visiter notre agence."
                             },
                             {
                                 "id": "main-contacto",
-                                "title": "Centro de contacto",
-                                "description": "Te atenderá uno de nuestro agentes."
+                                "title": "Centre de contact",
+                                "description": "L'un de nos agents vous assistera."
                             }
                         ]
                     }
@@ -61,8 +61,9 @@ function MessageList(number){
             }
         }
     });
-    return data;
+    return données;
 }
+
 function MessageComprar(number){
     const data = JSON.stringify({
         "messaging_product": "whatsapp",

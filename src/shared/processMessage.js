@@ -1,71 +1,63 @@
 const whatsappModel = require("../shared/whatsappmodels");
 const whatsappService = require("../services/whatsappService");
 
-function Process(textUser, number){
-    textUser= textUser.toLowerCase();
-    var models = [];
+function Process(texteUtilisateur, numero){
+    texteUtilisateur = texteUtilisateur.toLowerCase();
+    var modèles = [];
 
-    if(textUser.includes("hola")){
-        //SAUDAR
-        var model = whatsappModel.MessageText("Hola, un gusto saludarte. 👋", number);
-        models.push(model);
-        var modelList = whatsappModel.MessageList(number);
-        models.push(modelList);
+    if(texteUtilisateur.includes("bonjour")|| texteUtilisateur.includes("salut") || texteUtilisateur.includes("bonsoir") || texteUtilisateur.includes("hello")){
+        // SALUER
+        var modèle = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", numero);
+        modèles.push(modèle);
+        var modèleListe = whatsappModel.MessageList(numero);
+        modèles.push(modèleListe);
     }
-    else if(textUser.includes("gracias")){
-        // agradecimiento
-        var model = whatsappModel.MessageText("Gracias a ti por escribirme. 😉😎", number);
-        models.push(model);       
-
+    else if(texteUtilisateur.includes("merci")){
+        // REMERCIER
+        var modèle = whatsappModel.MessageText("Merci à vous de m'écrire. 😉😎", numero);
+        modèles.push(modèle);       
     }
-    else if(textUser.includes("adios") ||
-    textUser.includes("adiós")||
-    textUser.includes("bye")||
-    textUser.includes("me voy")
+    else if(texteUtilisateur.includes("au revoir") ||
+    texteUtilisateur.includes("bye") ||
+    texteUtilisateur.includes("je m'en vais")
     ){
-        // despedir
-        var model = whatsappModel.MessageText("Ve con cuidado. 😊", number);
-        models.push(model);
+        // DIRE AU REVOIR
+        var modèle = whatsappModel.MessageText("Partez avec prudence. 😊", numero);
+        modèles.push(modèle);
     }
-    else if(textUser.includes("comprar")){
-        // comprar
-        var model = whatsappModel.MessageComprar(number);
-        models.push(model);
-
+    else if(texteUtilisateur.includes("acheter")){
+        // ACHETER
+        var modèle = whatsappModel.MessageAcheter(numero);
+        modèles.push(modèle);
     }
-    else if(textUser.includes("vender")){
-        // vender
-        var model = whatsappModel.MessageText("👉 Regístrate en el siguiente formulario para poder evaluarte: https://form.jotform.com/222507994363665", number);
-        models.push(model);       
-
+    else if(texteUtilisateur.includes("vendre")){
+        // VENDRE
+        var modèle = whatsappModel.MessageText("👉 Inscrivez-vous sur le formulaire suivant pour que nous puissions vous évaluer : https://form.jotform.com/222507994363665", numero);
+        modèles.push(modèle);       
     }
-    else if(textUser.includes("agencia")){
-        // agencia
-        var model = whatsappModel.MessageText("Aquí tienes nuestra dirección. 😊", number);
-        models.push(model);
-        var modelLocation = whatsappModel.MessageLocation(number);
-        models.push(modelLocation);       
-
+    else if(texteUtilisateur.includes("agence")){
+        // AGENCER
+        var modèle = whatsappModel.MessageText("Voici notre adresse. 😊", numero);
+        modèles.push(modèle);
+        var modèleEmplacement = whatsappModel.MessageLocation(numero);
+        modèles.push(modèleEmplacement);       
     }
-    else if(textUser.includes("contacto")){
-        // vender
-        var model = whatsappModel.MessageText("📞*Centro de contacto:*\n912345678", number);
-        models.push(model);       
-
+    else if(texteUtilisateur.includes("contact")){
+        // CONTACT
+        var modèle = whatsappModel.MessageText("📞*Centre de contact :*\n912345678", numero);
+        modèles.push(modèle);       
     }
     else{
-        //No entiende
-        var model = whatsappModel.MessageText("No entiendo lo que dices", number);
-        models.push(model);
+        // NE COMPREND PAS
+        var modèle = whatsappModel.MessageText("Je ne comprends pas ce que vous dites", numero);
+        modèles.push(modèle);
     }
 
-    models.forEach(model => {
-        whatsappService.SendMessageWhatsApp(model);
+    modèles.forEach(modèle => {
+        whatsappService.SendMessageWhatsApp(modèle);
     });
-    
-
-
 }
+
 
 module.exports = {
     Process
