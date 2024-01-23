@@ -5,6 +5,14 @@ function Process(textUser, number){
     textUser= textUser.toLowerCase();
     var models = [];
 
+    if(textUser.includes("bonjour") || textUser.includes("salut") || textUser.includes("slt") || textUser.includes("bjr") || textUser.includes("mbote") || textUser.includes("hello") ){
+        //SAUDAR
+        var model = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
+        models.push(model);
+        var modelList = whatsappModel.MessageList(number);
+        models.push(modelList);
+    }
+
     if(textUser.includes("hola")){
         //SAUDAR
         var model = whatsappModel.MessageText("Hola, un gusto saludarte. 👋", number);
@@ -55,7 +63,7 @@ function Process(textUser, number){
     }
     else{
         //No entiende
-        var model = whatsappModel.MessageText("No entiendo lo que dices", number);
+        var model = whatsappModel.MessageText("Je ne comprends pas ce que vous dites", number);
         models.push(model);
     }
 
