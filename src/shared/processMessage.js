@@ -38,23 +38,23 @@ async function Process (textUser, number){
     else if(textUser.includes("1 000 FC")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
-        // await payment("CDF", "AIRTEL", "976602147", "13");
-        console.log("Mon numero  "+number);
-        const numberWithout43 = number.substring(3);
-        const suffixNumber = numberWithout43.substring(0, 2);
-        if (suffixNumber == "81" || suffixNumber == "82" || suffixNumber == "83")  {
-            await payment("CDF", "MPESA", "0"+numberWithout43, "13");
+        await payment("CDF", "AIRTEL", "976602147", "13");
+        // console.log("Mon numero  "+number);
+        // const numberWithout43 = number.substring(3);
+        // const suffixNumber = numberWithout43.substring(0, 2);
+        // if (suffixNumber == "81" || suffixNumber == "82" || suffixNumber == "83")  {
+        //     await payment("CDF", "MPESA", "0"+numberWithout43, "13");
             
-        } else if(suffixNumber == "89" || suffixNumber == "85" || suffixNumber == "84" || suffixNumber == "80") {
-            await payment("CDF", "ORANGE", "0"+numberWithout43, "13");
+        // } else if(suffixNumber == "89" || suffixNumber == "85" || suffixNumber == "84" || suffixNumber == "80") {
+        //     await payment("CDF", "ORANGE", "0"+numberWithout43, "13");
             
-        } else if(suffixNumber == "99" || suffixNumber == "98" || suffixNumber == "97"){
-            await payment("CDF", "AIRTEL", numberWithout43, "13");
-        }else{
-            var model = whatsappModel.MessageText("Votre numéro n'est pas pris en charge par cet opérateur. Merci de vérifier.", number);
-            models.push(model);
+        // } else if(suffixNumber == "99" || suffixNumber == "98" || suffixNumber == "97"){
+        //     await payment("CDF", "AIRTEL", numberWithout43, "13");
+        // }else{
+        //     var model = whatsappModel.MessageText("Votre numéro n'est pas pris en charge par cet opérateur. Merci de vérifier.", number);
+        //     models.push(model);
 
-        }
+        // }
     }else if(textUser.includes("0.4 $")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 0.4 $. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
