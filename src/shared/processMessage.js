@@ -39,6 +39,11 @@ function Process (textUser, number){
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
         payment("CDF", "MPESA", "0826016607", "13");
+    }else if(textUser.includes("0.4 $")) {
+        var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 0.4 $. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
+        models.push(model);
+        console.log("Mon numero  "+number);
+        payment("USD", "MPESA", "0826016607", "13");
     }
     // else if(textUser.includes("comprar")){
     //     // comprar
