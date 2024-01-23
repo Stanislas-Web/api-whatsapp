@@ -28,7 +28,7 @@ function MessageList2(number){
                 "button": "Voir les options",
                 "sections": [
                     {
-                        "title": "26 jours | 78000 FC | 31.2 $",
+                        "title": "26 jours|78000 FC|31.2 $",
                         "rows": [
                             {
                                 "id": "main-comprar",
