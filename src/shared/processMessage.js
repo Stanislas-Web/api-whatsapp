@@ -2,7 +2,7 @@ const whatsappModel = require("../shared/whatsappmodels");
 const whatsappService = require("../services/whatsappService");
 const {payment} = require("../shared/payment");
 
-function Process (textUser, number){
+async function Process (textUser, number){
     // textUser= textUser.toLowerCase();
     var models = [];
 
@@ -38,7 +38,7 @@ function Process (textUser, number){
     else if(textUser.includes("1 000 FC")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
-        payment("CDF", "MPESA", "0826016607", "13");
+        await payment("CDF", "MPESA", "0826016607", "13");
     }else if(textUser.includes("0.4 $")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 0.4 $. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
@@ -46,13 +46,13 @@ function Process (textUser, number){
         const numberWithout43 = number.substring(3);
         const suffixNumber = numberWithout43.substring(0, 2);
         if (suffixNumber == "81" || suffixNumber == "82" || suffixNumber == "83")  {
-            payment("USD", "MPESA", "0"+numberWithout43, "13");
+            await payment("USD", "MPESA", "0"+numberWithout43, "13");
             
         } else if(suffixNumber == "89" || suffixNumber == "85" || suffixNumber == "84" || suffixNumber == "80") {
-            payment("USD", "ORANGE", "0"+numberWithout43, "13");
+            await payment("USD", "ORANGE", "0"+numberWithout43, "13");
             
         } else if(suffixNumber == "99" || suffixNumber == "98" || suffixNumber == "97"){
-            payment("USD", "AIRTEL", numberWithout43, "13");
+            await payment("USD", "AIRTEL", numberWithout43, "13");
         }else{
             var model = whatsappModel.MessageText("Votre numéro n'est pas pris en charge par cet opérateur. Merci de vérifier.", number);
             models.push(model);
