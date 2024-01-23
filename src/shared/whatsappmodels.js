@@ -31,32 +31,32 @@ function MessageListFrench(number){
                         "title": "Acheter et vendre des produits",
                         "rows": [
                             {
-                                "id": "main-comprar1",
+                                "id": "abonnement26Usd",
                                 "title": "Acheter",
                                 "description": "Achetez les meilleurs produits pour votre maison"
                             },
                             {
-                                "id": "main-vender5",
+                                "id": "abonnement26CDF",
                                 "title": "Vendre",
                                 "description": "Vendez vos produits"
                             }
                         ]
                     },
-                    {
-                        "title": "📍Centre d'attention",
-                        "rows": [
-                            {
-                                "id": "main-agencia1",
-                                "title": "Agence",
-                                "description": "Vous pouvez visiter notre agence.."
-                            },
-                            {
-                                "id": "main-contacto5",
-                                "title": "Centre de contact",
-                                "description": "L'un de nos agents vous assistera.."
-                            }
-                        ]
-                    }
+                    // {
+                    //     "title": "📍Centre d'attention",
+                    //     "rows": [
+                    //         {
+                    //             "id": "main-agencia1",
+                    //             "title": "Agence",
+                    //             "description": "Vous pouvez visiter notre agence.."
+                    //         },
+                    //         {
+                    //             "id": "main-contacto5",
+                    //             "title": "Centre de contact",
+                    //             "description": "L'un de nos agents vous assistera.."
+                    //         }
+                    //     ]
+                    // }
                 ]
             }
         }
