@@ -81,16 +81,16 @@ function MessageList(number){
                 "button": "Voir les options",
                 "sections": [
                     {
-                        "title": "Compra y vende productos",
+                        "title": "26 Jours | 7800 fc | 31.2 $",
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "Comprar",
+                                "title": "7800 fc",
                                 "description": "Compra los mejores productos para tu hogar"
                             },
                             {
                                 "id": "main-vender",
-                                "title": "Vender",
+                                "title": "31.2 $",
                                 "description": "Vende tus productos"
                             }
                         ]
