@@ -32,7 +32,7 @@ function MessageList2(number){
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "78000 FC",
+                                "title": "78 000 FC",
                                 // "description": "Compra los mejores productos para tu hogar"
                             },
                             {
@@ -43,20 +43,50 @@ function MessageList2(number){
                         ]
                     },
                     {
-                        "title": "📍Centro de atención",
+                        "title": "14 jours",
                         "rows": [
                             {
-                                "id": "main-agencia",
-                                "title": "Agencia",
-                                "description": "Puedes visitar nuestra agencia."
+                                "id": "main-comprar",
+                                "title": "28 0000 FC",
+                                // "description": "Compra los mejores productos para tu hogar"
                             },
                             {
-                                "id": "main-contacto",
-                                "title": "Centro de contacto",
-                                "description": "Te atenderá uno de nuestro agentes."
+                                "id": "main-vender",
+                                "title": "11.2 $",
+                                // "description": "Vende tus productos"
                             }
                         ]
-                    }
+                    },
+                    {
+                        "title": "1 jour",
+                        "rows": [
+                            {
+                                "id": "main-comprar",
+                                "title": "1 0000 FC",
+                                // "description": "Compra los mejores productos para tu hogar"
+                            },
+                            {
+                                "id": "main-vender",
+                                "title": "0.4 $",
+                                // "description": "Vende tus productos"
+                            }
+                        ]
+                    },
+                    // {
+                    //     "title": "📍Centro de atención",
+                    //     "rows": [
+                    //         {
+                    //             "id": "main-agencia",
+                    //             "title": "Agencia",
+                    //             "description": "Puedes visitar nuestra agencia."
+                    //         },
+                    //         {
+                    //             "id": "main-contacto",
+                    //             "title": "Centro de contacto",
+                    //             "description": "Te atenderá uno de nuestro agentes."
+                    //         }
+                    //     ]
+                    // }
                 ]
             }
         }
