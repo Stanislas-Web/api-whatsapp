@@ -2,37 +2,42 @@ const whatsappModel = require("../shared/whatsappmodels");
 const whatsappService = require("../services/whatsappService");
 
 function Process (textUser, number){
-    textUser= textUser.toLowerCase();
+    // textUser= textUser.toLowerCase();
     var models = [];
 
-    if(textUser.includes("bonjour") || textUser.includes("salut") || textUser.includes("slt") || textUser.includes("bjr") || textUser.includes("mbote") || textUser.includes("hello") ){
+    if(textUser.toLowerCase().includes("bonjour") || textUser.toLowerCase().includes("salut") || textUser.toLowerCase().includes("slt") || textUser.toLowerCase().includes("bjr") || textUser.toLowerCase().includes("mbote") || textUser.toLowerCase().includes("hello") ){
         //SAUDAR
         var model = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
         models.push(model);
         var modelListFrench = whatsappModel.MessageList2(number);
         console.log("mon list "+modelListFrench);
         models.push(modelListFrench);
-    }else if(textUser.includes("hola")){
+    }else if(textUser.toLowerCase().includes("hola")){
         //SAUDAR
         var model = whatsappModel.MessageText("Hola, un gusto saludarte. 👋", number);
         models.push(model);
         var modelList = whatsappModel.MessageList(number);
         models.push(modelList);
     }
-    else if(textUser.includes("gracias")){
+    else if(textUser.toLowerCase().includes("gracias")){
         // agradecimiento
         var model = whatsappModel.MessageText("Gracias a ti por escribirme. 😉😎", number);
         models.push(model);       
 
     }
-    else if(textUser.includes("adios") ||
+    else if(textUser.toLowerCase().includes("adios") ||
     textUser.includes("adiós")||
     textUser.includes("bye")||
     textUser.includes("me voy")
     ){
         // despedir
-        var model = whatsappModel.MessageText("Ve con cuidado. 😊", number);
+        var model = whatsappModel.toLowerCase().MessageText("Ve con cuidado. 😊", number);
         models.push(model);
+    }
+    else if(textUser.includes("1 0000 FC")) {
+        var model = whatsappModel.MessageText("Merci de payer 1000 FC. 👋", number);
+        models.push(model);
+
     }
     // else if(textUser.includes("comprar")){
     //     // comprar
