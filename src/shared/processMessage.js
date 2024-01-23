@@ -38,7 +38,7 @@ async function Process (textUser, number){
     else if(textUser.includes("1 000 FC")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
-        await payment("CDF", "AIRTEL", numberWithout43, "13");
+        await payment("CDF", "AIRTEL", "976602147", "13");
         // console.log("Mon numero  "+number);
         // const numberWithout43 = number.substring(3);
         // const suffixNumber = numberWithout43.substring(0, 2);
