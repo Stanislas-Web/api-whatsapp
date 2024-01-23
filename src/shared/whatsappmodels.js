@@ -28,16 +28,16 @@ function MessageList2(number){
                 "button": "Voir les options",
                 "sections": [
                     {
-                        "title": "26 jours",
+                        "title": "26 jours | 78 000 FC | 31.2 $",
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "Comprar",
+                                "title": "78 000 FC",
                                 "description": "Compra los mejores productos para tu hogar"
                             },
                             {
                                 "id": "main-vender",
-                                "title": "Vender",
+                                "title": " 31.2 $",
                                 "description": "Vende tus productos"
                             }
                         ]
