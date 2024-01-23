@@ -33,32 +33,32 @@ function Process(textUser, number){
         var model = whatsappModel.MessageText("Ve con cuidado. 😊", number);
         models.push(model);
     }
-    else if(textUser.includes("comprar")){
-        // comprar
-        var model = whatsappModel.MessageComprar(number);
-        models.push(model);
+    // else if(textUser.includes("comprar")){
+    //     // comprar
+    //     var model = whatsappModel.MessageComprar(number);
+    //     models.push(model);
 
-    }
-    else if(textUser.includes("vender")){
-        // vender
-        var model = whatsappModel.MessageText("👉 Regístrate en el siguiente formulario para poder evaluarte: https://form.jotform.com/222507994363665", number);
-        models.push(model);       
+    // }
+    // else if(textUser.includes("vender")){
+    //     // vender
+    //     var model = whatsappModel.MessageText("👉 Regístrate en el siguiente formulario para poder evaluarte: https://form.jotform.com/222507994363665", number);
+    //     models.push(model);       
 
-    }
-    else if(textUser.includes("agencia")){
-        // agencia
-        var model = whatsappModel.MessageText("Aquí tienes nuestra dirección. 😊", number);
-        models.push(model);
-        var modelLocation = whatsappModel.MessageLocation(number);
-        models.push(modelLocation);       
+    // }
+    // else if(textUser.includes("agencia")){
+    //     // agencia
+    //     var model = whatsappModel.MessageText("Aquí tienes nuestra dirección. 😊", number);
+    //     models.push(model);
+    //     var modelLocation = whatsappModel.MessageLocation(number);
+    //     models.push(modelLocation);       
 
-    }
-    else if(textUser.includes("contacto")){
-        // vender
-        var model = whatsappModel.MessageText("📞*Centro de contacto:*\n912345678", number);
-        models.push(model);       
+    // }
+    // else if(textUser.includes("contacto")){
+    //     // vender
+    //     var model = whatsappModel.MessageText("📞*Centro de contacto:*\n912345678", number);
+    //     models.push(model);       
 
-    }
+    // }
     else{
         //No entiende
         var model = whatsappModel.MessageText("Je ne comprends pas ce que vous dites", number);
