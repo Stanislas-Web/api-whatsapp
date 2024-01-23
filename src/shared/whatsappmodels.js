@@ -19,13 +19,13 @@ function MessageList2(number){
         "interactive": {
             "type": "list",
             "body": {
-                "text": "✅ Abonnement yeyo"
+                "text": "✅ Abonnement"
             },
             "footer": {
-                "text": "Selecciona una de las opciones para poder atenderte"
+                "text": "Selectionner votre abonnement"
             },
             "action": {
-                "button": "Ver opciones",
+                "button": "Voir les options",
                 "sections": [
                     {
                         "title": "Compra y vende productos",
