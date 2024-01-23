@@ -28,35 +28,35 @@ function MessageListFrench(number){
                 "button": "Voir les options",
                 "sections": [
                     {
-                        "title": "Acheter et vendre des produits",
+                        "title": "Compra y vende productos",
                         "rows": [
                             {
-                                "id": "abonnement26Usd",
-                                "title": "Acheter",
-                                "description": "Achetez les meilleurs produits pour votre maison"
+                                "id": "main-comprar",
+                                "title": "Comprar",
+                                "description": "Compra los mejores productos para tu hogar"
                             },
                             {
-                                "id": "abonnement26CDF",
-                                "title": "Vendre",
-                                "description": "Vendez vos produits"
+                                "id": "main-vender",
+                                "title": "Vender",
+                                "description": "Vende tus productos"
                             }
                         ]
                     },
-                    // {
-                    //     "title": "📍Centre d'attention",
-                    //     "rows": [
-                    //         {
-                    //             "id": "main-agencia1",
-                    //             "title": "Agence",
-                    //             "description": "Vous pouvez visiter notre agence.."
-                    //         },
-                    //         {
-                    //             "id": "main-contacto5",
-                    //             "title": "Centre de contact",
-                    //             "description": "L'un de nos agents vous assistera.."
-                    //         }
-                    //     ]
-                    // }
+                    {
+                        "title": "📍Centro de atención",
+                        "rows": [
+                            {
+                                "id": "main-agencia",
+                                "title": "Agencia",
+                                "description": "Puedes visitar nuestra agencia."
+                            },
+                            {
+                                "id": "main-contacto",
+                                "title": "Centro de contacto",
+                                "description": "Te atenderá uno de nuestro agentes."
+                            }
+                        ]
+                    }
                 ]
             }
         }
