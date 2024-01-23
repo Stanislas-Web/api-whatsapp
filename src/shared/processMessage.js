@@ -43,7 +43,10 @@ function Process (textUser, number){
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 0.4 $. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
         console.log("Mon numero  "+number);
-        payment("USD", "MPESA", "0826016607", "13");
+        const numberWithout43 = number.substring(3)
+
+        
+        payment("USD", "MPESA", "0"+numberWithout43, "13");
     }
     // else if(textUser.includes("comprar")){
     //     // comprar
