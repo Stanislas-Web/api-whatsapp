@@ -4,7 +4,7 @@ const FormData = require('form-data');
 
 
 
-async function payment(currency, provider, walletId, abonnement) {
+async function payment(currency, provider, walletId, abonnement, phone) {
     try {
         let data = new FormData();
         // data.append('currency', currency);
@@ -19,6 +19,8 @@ async function payment(currency, provider, walletId, abonnement) {
         data.append('IDgenerateEtud', 'STDTAC20230330092HFM5UM110173');
         data.append('IDabonnement', abonnement);
         data.append('IdAgent', "AGTTAC20230505086WCYT_9110211");
+        data.append('phoneEtud', phone);
+        
 
         let config = {
             method: 'post',

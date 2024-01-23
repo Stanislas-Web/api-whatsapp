@@ -43,7 +43,7 @@ async function Process (textUser, number){
         const numberWithout43 = number.substring(3);
         const suffixNumber = numberWithout43.substring(0, 2);
         if (suffixNumber == "81" || suffixNumber == "82" || suffixNumber == "83")  {
-            await payment("CDF", "MPESA", "0"+numberWithout43, "13");
+            await payment("CDF", "MPESA", "0"+numberWithout43, "13", numberWithout43);
             
         } else if(suffixNumber == "89" || suffixNumber == "85" || suffixNumber == "84" || suffixNumber == "80") {
             await payment("CDF", "ORANGE", "0"+numberWithout43, "13");
