@@ -22,7 +22,7 @@ function MessageListFrench(number){
                 "text": "✅ J'ai ces options"
             },
             "footer": {
-                "text": "Sélectionnez l'une des options pour que nous puissions vous aider"
+                "text": "Choisissez votre abonnement."
             },
             "action": {
                 "button": "Voir les options",
@@ -72,13 +72,13 @@ function MessageList(number){
         "interactive": {
             "type": "list",
             "body": {
-                "text": "✅ J'ai ces options"
+                "text": "✅ Abonnement"
             },
             "footer": {
-                "text": "Selecciona una de las opciones para poder atenderte"
+                "text": "Choisissez votre abonnement."
             },
             "action": {
-                "button": "Ver opciones",
+                "button": "Voir les options",
                 "sections": [
                     {
                         "title": "Compra y vende productos",
