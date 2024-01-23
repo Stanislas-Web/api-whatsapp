@@ -28,7 +28,7 @@ function MessageList2(number){
                 "button": "Voir les options",
                 "sections": [
                     {
-                        "title": "Compra y vende productos",
+                        "title": "26 jours",
                         "rows": [
                             {
                                 "id": "main-comprar",
