@@ -13,27 +13,6 @@ async function Process (textUser, number){
         var modelListFrench = whatsappModel.MessageList2(number);
         console.log("mon list "+modelListFrench);
         models.push(modelListFrench);
-    }else if(textUser.toLowerCase().includes("hola")){
-        //SAUDAR
-        var model = whatsappModel.MessageText("Hola, un gusto saludarte. 👋", number);
-        models.push(model);
-        var modelList = whatsappModel.MessageList(number);
-        models.push(modelList);
-    }
-    else if(textUser.toLowerCase().includes("gracias")){
-        // agradecimiento
-        var model = whatsappModel.MessageText("Gracias a ti por escribirme. 😉😎", number);
-        models.push(model);       
-
-    }
-    else if(textUser.toLowerCase().includes("adios") ||
-    textUser.includes("adiós")||
-    textUser.includes("bye")||
-    textUser.includes("me voy")
-    ){
-        // despedir
-        var model = whatsappModel.toLowerCase().MessageText("Ve con cuidado. 😊", number);
-        models.push(model);
     }
     else if(textUser.includes("1 000 FC")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
