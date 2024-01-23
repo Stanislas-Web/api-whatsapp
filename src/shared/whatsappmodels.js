@@ -11,6 +11,59 @@ function MessageText(textResponse, number){
     return data;
 }
 
+function MessageListFrench(number){
+    const data = JSON.stringify({
+        "messaging_product": "whatsapp",
+        "to": number,
+        "type": "interactive",
+        "interactive": {
+            "type": "list",
+            "body": {
+                "text": "✅ J'ai ces options"
+            },
+            "footer": {
+                "text": "Sélectionnez l'une des options pour que nous puissions vous aider"
+            },
+            "action": {
+                "button": "Voir les options",
+                "sections": [
+                    {
+                        "title": "Acheter et vendre des produits",
+                        "rows": [
+                            {
+                                "id": "main-comprar1",
+                                "title": "Acheter",
+                                "description": "Achetez les meilleurs produits pour votre maison"
+                            },
+                            {
+                                "id": "main-vender",
+                                "title": "Vendre",
+                                "description": "Vendez vos produits"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "📍Centre d'attention",
+                        "rows": [
+                            {
+                                "id": "main-agencia1",
+                                "title": "Agence",
+                                "description": "Vous pouvez visiter notre agence.."
+                            },
+                            {
+                                "id": "main-contacto",
+                                "title": "Centre de contact",
+                                "description": "L'un de nos agents vous assistera.."
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    });
+    return data;
+}
+
 function MessageList(number){
     const data = JSON.stringify({
         "messaging_product": "whatsapp",
@@ -112,59 +165,6 @@ function MessageLocation(number){
     return data;
 }
 
-
-function MessageListFrench(number){
-    const data = JSON.stringify({
-        "messaging_product": "whatsapp",
-        "to": number,
-        "type": "interactive",
-        "interactive": {
-            "type": "list",
-            "body": {
-                "text": "✅ J'ai ces options"
-            },
-            "footer": {
-                "text": "Sélectionnez l'une des options pour que nous puissions vous aider"
-            },
-            "action": {
-                "button": "Voir les options",
-                "sections": [
-                    {
-                        "title": "Acheter et vendre des produits",
-                        "rows": [
-                            {
-                                "id": "main-comprar",
-                                "title": "Acheter",
-                                "description": "Achetez les meilleurs produits pour votre maison"
-                            },
-                            {
-                                "id": "main-vender",
-                                "title": "Vendre",
-                                "description": "Vendez vos produits"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "📍Centre d'attention",
-                        "rows": [
-                            {
-                                "id": "main-agencia",
-                                "title": "Agence",
-                                "description": "Vous pouvez visiter notre agence.."
-                            },
-                            {
-                                "id": "main-contacto",
-                                "title": "Centre de contact",
-                                "description": "L'un de nos agents vous assistera.."
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    });
-    return data;
-}
 
 module.exports = {
 MessageText,

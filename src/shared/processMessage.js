@@ -9,8 +9,8 @@ function Process(textUser, number){
         //SAUDAR
         var model = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
         models.push(model);
-        var modelList = whatsappModel.MessageListFrench(number);
-        models.push(modelList);
+        var modelListFrench = whatsappModel.MessageListFrench(number);
+        models.push(modelListFrench);
     }else if(textUser.includes("hola")){
         //SAUDAR
         var model = whatsappModel.MessageText("Hola, un gusto saludarte. 👋", number);
