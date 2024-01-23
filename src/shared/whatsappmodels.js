@@ -170,5 +170,6 @@ module.exports = {
 MessageText,
 MessageList,
 MessageComprar,
-MessageLocation
+MessageLocation,
+MessageListFrench
 };
