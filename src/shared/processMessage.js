@@ -5,56 +5,57 @@ function Process(textUser, number){
     textUser= textUser.toLowerCase();
     var models = [];
 
-    if(texteUtilisateur.includes("bonjour")|| texteUtilisateur.includes("salut") || texteUtilisateur.includes("bonsoir") || texteUtilisateur.includes("hello")){
+    if(textUser.includes("hola")){
         //SAUDAR
-        var model = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
+        var model = whatsappModel.MessageText("Hola, un gusto saludarte. 👋", number);
         models.push(model);
         var modelList = whatsappModel.MessageList(number);
         models.push(modelList);
     }
-    else if(textUser.includes("Merci")){
+    else if(textUser.includes("gracias")){
         // agradecimiento
-        var model = whatsappModel.MessageText("Merci à vous de m'écrire. 😉😎", number);
+        var model = whatsappModel.MessageText("Gracias a ti por escribirme. 😉😎", number);
         models.push(model);       
 
     }
-    else if(textUser.includes("au revoir") ||
+    else if(textUser.includes("adios") ||
+    textUser.includes("adiós")||
     textUser.includes("bye")||
-    textUser.includes("je m'en vais")
+    textUser.includes("me voy")
     ){
         // despedir
-        var model = whatsappModel.MessageText("Partez avec prudence. 😊", number);
+        var model = whatsappModel.MessageText("Ve con cuidado. 😊", number);
         models.push(model);
     }
-    else if(textUser.includes("acheter")){
+    else if(textUser.includes("comprar")){
         // comprar
         var model = whatsappModel.MessageComprar(number);
         models.push(model);
 
     }
-    else if(textUser.includes("vendre")){
+    else if(textUser.includes("vender")){
         // vender
-        var model = whatsappModel.MessageText("👉 Inscrivez-vous sur le formulaire suivant pour que nous puissions vous évaluer : https://form.jotform.com/222507994363665", number);
+        var model = whatsappModel.MessageText("👉 Regístrate en el siguiente formulario para poder evaluarte: https://form.jotform.com/222507994363665", number);
         models.push(model);       
 
     }
-    else if(textUser.includes("agence")){
+    else if(textUser.includes("agencia")){
         // agencia
-        var model = whatsappModel.MessageText("Voici notre adresse. 😊", number);
+        var model = whatsappModel.MessageText("Aquí tienes nuestra dirección. 😊", number);
         models.push(model);
         var modelLocation = whatsappModel.MessageLocation(number);
         models.push(modelLocation);       
 
     }
-    else if(textUser.includes("contact")){
+    else if(textUser.includes("contacto")){
         // vender
-        var model = whatsappModel.MessageText("📞*Centre de contact :*\n+243826016607", number);
+        var model = whatsappModel.MessageText("📞*Centro de contacto:*\n912345678", number);
         models.push(model);       
 
     }
     else{
         //No entiende
-        var model = whatsappModel.MessageText("Je ne comprends pas ce que vous dites", number);
+        var model = whatsappModel.MessageText("No entiendo lo que dices", number);
         models.push(model);
     }
 
@@ -69,11 +70,3 @@ function Process(textUser, number){
 module.exports = {
     Process
 };
-
-
-
-
-
-
-
-

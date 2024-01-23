@@ -11,7 +11,7 @@ function MessageText(textResponse, number){
     return data;
 }
 
-function MessageList(number) {
+function MessageList(number){
     const data = JSON.stringify({
         "messaging_product": "whatsapp",
         "to": number,
@@ -19,41 +19,41 @@ function MessageList(number) {
         "interactive": {
             "type": "list",
             "body": {
-                "text": "✅ J'ai ces options"
+                "text": "✅ Tengo estas opciones"
             },
             "footer": {
-                "text": "Sélectionnez l'une des options pour que nous puissions vous aider"
+                "text": "Selecciona una de las opciones para poder atenderte"
             },
             "action": {
-                "button": "Voir les options",
+                "button": "Ver opciones",
                 "sections": [
                     {
-                        "title": "Acheter et vendre des produits",
+                        "title": "Compra y vende productos",
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "Acheter",
-                                "description": "Achetez les meilleurs produits pour votre maison"
+                                "title": "Comprar",
+                                "description": "Compra los mejores productos para tu hogar"
                             },
                             {
                                 "id": "main-vender",
-                                "title": "Vendre",
-                                "description": "Vendez vos produits"
+                                "title": "Vender",
+                                "description": "Vende tus productos"
                             }
                         ]
                     },
                     {
-                        "title": "📍Centre d'attention",
+                        "title": "📍Centro de atención",
                         "rows": [
                             {
                                 "id": "main-agencia",
-                                "title": "Agence",
-                                "description": "Vous pouvez visiter notre agence."
+                                "title": "Agencia",
+                                "description": "Puedes visitar nuestra agencia."
                             },
                             {
                                 "id": "main-contacto",
-                                "title": "Centre de contact",
-                                "description": "L'un de nos agents vous assistera."
+                                "title": "Centro de contacto",
+                                "description": "Te atenderá uno de nuestro agentes."
                             }
                         ]
                     }
@@ -63,8 +63,6 @@ function MessageList(number) {
     });
     return data;
 }
-
-
 function MessageComprar(number){
     const data = JSON.stringify({
         "messaging_product": "whatsapp",
@@ -73,7 +71,7 @@ function MessageComprar(number){
         "interactive": {
             "type": "button",
             "body": {
-                "text": "Sélectionnez l'un des produits"
+                "text": "Selecciona uno de los productos"
             },
             "action": {
                 "buttons": [
@@ -81,14 +79,14 @@ function MessageComprar(number){
                         "type": "reply",
                         "reply": {
                             "id": "option-laptop",
-                            "title": "Ordinateur portable"
+                            "title": "Laptop"
                         }
                     },
                     {
                         "type": "reply",
                         "reply": {
                             "id": "option-computadora",
-                            "title": "Ordinateur"
+                            "title": "Computadora"
                         }
                     }
                 ]
@@ -97,7 +95,6 @@ function MessageComprar(number){
     });
     return data;
 }
-
 
 function MessageLocation(number){
     const data = JSON.stringify({
@@ -121,9 +118,3 @@ MessageList,
 MessageComprar,
 MessageLocation
 };
-
-
-
-
-
-
