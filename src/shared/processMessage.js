@@ -1,15 +1,15 @@
 const whatsappModel = require("../shared/whatsappmodels");
 const whatsappService = require("../services/whatsappService");
 
-function Process(textUser, number){
+async function Process (textUser, number){
     textUser= textUser.toLowerCase();
     var models = [];
 
     if(textUser.includes("bonjour") || textUser.includes("salut") || textUser.includes("slt") || textUser.includes("bjr") || textUser.includes("mbote") || textUser.includes("hello") ){
         //SAUDAR
-        var model = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
+        var model = await whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
         models.push(model);
-        var modelListFrench = whatsappModel.MessageList2(number);
+        var modelListFrench = await whatsappModel.MessageList2(number);
         console.log("mon list "+modelListFrench);
         models.push(modelListFrench);
     }else if(textUser.includes("hola")){
