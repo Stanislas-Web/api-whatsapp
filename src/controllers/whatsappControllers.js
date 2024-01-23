@@ -34,7 +34,7 @@ const Hello = (req, res) => {
 
 const VerifyToken = (req, res) => {
     try {
-        let myToken = "RTQWWTVHBDEJHJKIKIKNDS12345YT";
+        let myToken = "stanislas";
         let mode = req.query["hub.mode"];
         let token = req.query["hub.verify_token"];
         let challenge = req.query["hub.challenge"];
