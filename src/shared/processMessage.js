@@ -34,10 +34,10 @@ function Process (textUser, number){
         var model = whatsappModel.toLowerCase().MessageText("Ve con cuidado. 😊", number);
         models.push(model);
     }
-    else if(textUser.includes("1 0000 FC")) {
-        var model = whatsappModel.MessageText("Merci de payer 1000 FC. 👋", number);
+    else if(textUser.includes("1 000 FC")) {
+        var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
         models.push(model);
-
+        payment("CDF", "MPESA", "0826016607", "13");
     }
     // else if(textUser.includes("comprar")){
     //     // comprar

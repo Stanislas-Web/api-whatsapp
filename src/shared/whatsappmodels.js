@@ -62,7 +62,7 @@ function MessageList2(number){
                         "rows": [
                             {
                                 "id": "main-comprar",
-                                "title": "1 0000 FC",
+                                "title": "1 000 FC",
                                 // "description": "Compra los mejores productos para tu hogar"
                             },
                             {
