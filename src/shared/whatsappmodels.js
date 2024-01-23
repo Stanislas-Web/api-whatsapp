@@ -33,12 +33,12 @@ function MessageList2(number){
                             {
                                 "id": "main-comprar",
                                 "title": "78000 FC",
-                                "description": "Compra los mejores productos para tu hogar"
+                                // "description": "Compra los mejores productos para tu hogar"
                             },
                             {
                                 "id": "main-vender",
                                 "title": "31.2 $",
-                                "description": "Vende tus productos"
+                                // "description": "Vende tus productos"
                             }
                         ]
                     },
