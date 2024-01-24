@@ -207,7 +207,7 @@ function MessageComprar(number){
         "interactive": {
             "type": "button",
             "body": {
-                "text": "Selecciona uno de los productos"
+                "text": "Souhaites-tu utiliser ton numéro WhatsApp comme ton numéro de paiement ?"
             },
             "action": {
                 "buttons": [
@@ -215,14 +215,14 @@ function MessageComprar(number){
                         "type": "reply",
                         "reply": {
                             "id": "option-laptop",
-                            "title": "Laptop"
+                            "title": "Oui"
                         }
                     },
                     {
                         "type": "reply",
                         "reply": {
                             "id": "option-computadora",
-                            "title": "Computadora"
+                            "title": "Non"
                         }
                     }
                 ]

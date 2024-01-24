@@ -10,9 +10,10 @@ async function Process (textUser, number){
         //SAUDAR
         var model = whatsappModel.MessageText("Bonjour, c'est un plaisir de vous saluer. 👋", number);
         models.push(model);
-        var modelListFrench = whatsappModel.MessageList2(number);
-        console.log("mon list "+modelListFrench);
-        models.push(modelListFrench);
+
+        var model = whatsappModel.MessageComprar(number);
+        models.push(model);
+
     }
     else if(textUser.includes("1 000 FC")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
@@ -53,6 +54,14 @@ async function Process (textUser, number){
             models.push(model);
 
         }
+
+        
+    }else if (textUser.includes("Oui")) {
+
+        var modelListFrench = whatsappModel.MessageList2(number);
+        console.log("mon list "+modelListFrench);
+        models.push(modelListFrench);
+
 
         
     }
