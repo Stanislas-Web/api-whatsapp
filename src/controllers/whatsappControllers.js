@@ -1,7 +1,6 @@
 const fs = require("fs");
 const myConsole = new console.Console(fs.createWriteStream("./logs.txt"));
 const processMessage = require("../shared/processMessage");
-const { Transacademia } = require("../models/transacademia.model");
 
 const Hello = (req, res) => {
     
@@ -33,44 +32,6 @@ const VerifyToken = (req, res) => {
     }
 }
 
-
-const CreateTransacademia = async (req, res) => {
-
-    const {
-        phoneWhatsapp,
-        phonePayment,
-        phoneAccount,
-        stdTac,
-      } = req.body;
-    
-      const transacademia = new Transacademia({
-        phoneWhatsapp: phoneWhatsapp,
-        phonePayment: phonePayment,
-        phoneAccount: phoneAccount,
-        stdTac: stdTac,
-      });
-    
-      const result = await transacademia.save();
-    
-      return res.status(201).send({
-        message: "Save Trans Academia datas successfully",
-        data: result,
-      });
-
-
-}
-
-const GetTransacademia = async (req, res) => {
-
-    const result = await Transacademia.find();
-
-    return res.status(200).send({
-      message: "get all Profils",
-      data: result,
-    });
-
-
-}
 
 
 
