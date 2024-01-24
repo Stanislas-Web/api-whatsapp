@@ -7,5 +7,4 @@ router
 .post("/", whatsAppController.ReceivedMessage)
 .post("/transacademia", whatsAppController.CreateTransacademia)
 .get("/transacademia", whatsAppController.GetTransacademia)
-
 module.exports = router;
