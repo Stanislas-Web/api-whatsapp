@@ -34,7 +34,7 @@ const VerifyToken = (req, res) => {
 }
 
 
-const CheckEndpoint = async (req, res) => {
+const CreateTransacademia = async (req, res) => {
 
     const {
         phoneWhatsapp,
@@ -56,6 +56,18 @@ const CheckEndpoint = async (req, res) => {
         message: "Save Trans Academia datas successfully",
         data: result,
       });
+
+
+}
+
+const GetTransacademia = async (req, res) => {
+
+    const result = await Transacademia.find();
+
+    return res.status(200).send({
+      message: "get all Profils",
+      data: result,
+    });
 
 
 }
@@ -144,5 +156,6 @@ module.exports = {
     VerifyToken,
     ReceivedMessage,
     Hello,
-    CheckEndpoint
+    GetTransacademia,
+    CreateTransacademia
 }
