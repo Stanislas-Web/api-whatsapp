@@ -113,7 +113,5 @@ function GetTextUser(messages){
 module.exports = {
     VerifyToken,
     ReceivedMessage,
-    Hello,
-    GetTransacademia,
-    CreateTransacademia
+    Hello
 }
