@@ -33,9 +33,6 @@ const VerifyToken = (req, res) => {
 }
 
 
-
-
-
 // const VerifyToken = (req, res) => {
 //     try {
 //         let myToken = "stanislas";
