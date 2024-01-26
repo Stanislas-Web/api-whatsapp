@@ -14,6 +14,11 @@ async function Process (textUser, number){
         var model = whatsappModel.MessageComprar(number);
         models.push(model);
 
+    } else if(textUser.toLowerCase().includes("code")){
+        //SAUDAR
+        var model = whatsappModel.MessageText(textUser, number);
+        models.push(model);
+
     }
     else if(textUser.includes("1 000 FC")) {
         var model = whatsappModel.MessageText("Vous allez voir s'afficher le popup de paiement pour 1 000 Fc. Veuillez confirmer le code PIN.\nVous recevrez une réponse dans l'application dans un court laps de temps ! 😊", number);
