@@ -57,7 +57,19 @@ const VerifyToken = (req, res) => {
 //         res.status(400).send();
 //     }
 // }
+const SendMessage = (req, res) => {
+    try{
 
+        let { number, message} = req.body;
+
+        processMessage.Process(message, number);       
+
+        res.send("EVENT_RECEIVED");
+    }catch(e){
+        myConsole.log(e);
+        res.send("EVENT_RECEIVED");
+    }
+}
 
 const ReceivedMessage = (req, res) => {
     try{
@@ -113,5 +125,6 @@ function GetTextUser(messages){
 module.exports = {
     VerifyToken,
     ReceivedMessage,
-    Hello
+    Hello,
+    SendMessage
 }
