@@ -105,6 +105,22 @@ async function Process (textUser, number){
 
 }
 
+async function OTP (textUser, number){
+    // textUser= textUser.toLowerCase();
+    var models = [];
+    var model = whatsappModel.MessageText(textUser, number);
+    models.push(model);
+
+
+    models.forEach(model => {
+        whatsappService.SendMessageWhatsApp(model);
+    });
+    
+
+
+}
+
 module.exports = {
-    Process
+    Process,
+    OTP
 };

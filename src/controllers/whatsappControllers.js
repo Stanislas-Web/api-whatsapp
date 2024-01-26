@@ -57,12 +57,30 @@ const VerifyToken = (req, res) => {
 //         res.status(400).send();
 //     }
 // }
+
 const SendMessage = (req, res) => {
     try{
-
         let { number, message} = req.body;
 
-        processMessage.Process(message, number);       
+
+        // var entry = (req.body["entry"])[0];
+        // var changes = (entry["changes"])[0];
+        // var value = changes["value"];
+        // var messageObject = value["messages"];
+
+        processMessage.OTP(message, number);
+
+        // if(typeof messageObject != "undefined"){
+        //     var messages = messageObject[0];
+        //     var number = messages["from"];
+
+        //     var text = GetTextUser(messages);
+            
+        //     if(text != ""){
+        //         processMessage.Process(message, number);
+        //     } 
+
+        // }        
 
         res.send("EVENT_RECEIVED");
     }catch(e){
@@ -70,6 +88,8 @@ const SendMessage = (req, res) => {
         res.send("EVENT_RECEIVED");
     }
 }
+
+
 
 const ReceivedMessage = (req, res) => {
     try{
